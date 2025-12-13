@@ -16,12 +16,12 @@ class WidgetTree extends StatelessWidget {
         title: const Text('Flutter Demo Home Page'),
         centerTitle: true,
         actions: [ValueListenableBuilder(
-          valueListenable: selectedThemeNotifier,
+          valueListenable: isDarkModeNotifier,
           builder: (context, selectedTheme, child) {
             return IconButton(onPressed: () {
-              selectedTheme = !selectedTheme;
+              isDarkModeNotifier.value = !isDarkModeNotifier.value;
               print(selectedTheme);
-            }, icon: selectedTheme ? Icon(Icons.dark_mode) : Icon(Icons.light_mode));
+            }, icon: selectedTheme ? Icon(Icons.light_mode) : Icon(Icons.dark_mode));
           }
         )],
       ),

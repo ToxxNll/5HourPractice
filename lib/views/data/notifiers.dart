@@ -1,4 +1,4 @@
 import 'package:flutter/widgets.dart';
 
 ValueNotifier<int> selectedPageNotifier = ValueNotifier(0);
-ValueNotifier<bool> selectedThemeNotifier = ValueNotifier(true);
+ValueNotifier<bool> isDarkModeNotifier = ValueNotifier(true);
