@@ -1,6 +1,7 @@
 import 'package:fivehour/views/data/notifiers.dart';
 import 'package:fivehour/views/pages/home_page.dart';
 import 'package:fivehour/views/pages/profile_page.dart';
+import 'package:fivehour/views/pages/settings_page.dart';
 import 'package:fivehour/views/widgets/navbar_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -15,15 +16,27 @@ class WidgetTree extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter Demo Home Page'),
         centerTitle: true,
-        actions: [ValueListenableBuilder(
-          valueListenable: isDarkModeNotifier,
-          builder: (context, selectedTheme, child) {
-            return IconButton(onPressed: () {
-              isDarkModeNotifier.value = !isDarkModeNotifier.value;
-              print(selectedTheme);
-            }, icon: selectedTheme ? Icon(Icons.light_mode) : Icon(Icons.dark_mode));
-          }
-        )],
+        actions: [
+          ValueListenableBuilder(
+            valueListenable: isDarkModeNotifier,
+            builder: (context, selectedTheme, child) {
+              return IconButton(
+                onPressed: () {
+                  isDarkModeNotifier.value = !isDarkModeNotifier.value;
+                  print(selectedTheme);
+                },
+                icon: selectedTheme
+                    ? Icon(Icons.light_mode)
+                    : Icon(Icons.dark_mode),
+              );
+            },
+          ),
+          IconButton(onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return SettingsPage();
+            },));
+          }, icon: Icon(Icons.settings)),
+        ],
       ),
       drawer: Drawer(
         child: Column(
