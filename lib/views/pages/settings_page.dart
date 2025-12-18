@@ -3,7 +3,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key});
+  const SettingsPage({super.key, required this.title});
+
+  final String title;
 
   @override
   State<SettingsPage> createState() => _ProfilePageState();
@@ -19,7 +21,7 @@ class _ProfilePageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: Text(widget.title),
         centerTitle: true,
         automaticallyImplyLeading:
             false, //This code automatically makes the back button
