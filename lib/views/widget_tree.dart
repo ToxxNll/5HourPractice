@@ -32,9 +32,12 @@ class WidgetTree extends StatelessWidget {
             },
           ),
           IconButton(onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return SettingsPage(title: 'Settings aoge',);
-            },));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return SettingsPage(title: 'Settings aoge');
+                  },));
           }, icon: Icon(Icons.settings)),
         ],
       ),
