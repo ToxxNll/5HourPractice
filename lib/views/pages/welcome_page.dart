@@ -1,3 +1,4 @@
+import 'package:fivehour/views/pages/home_page.dart';
 import 'package:fivehour/views/widgets/hero_widget.dart';
 import 'package:flutter/material.dart';
 
