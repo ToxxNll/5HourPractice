@@ -8,8 +8,12 @@ class HeroWidget extends StatelessWidget {
     return Hero(
       tag: 'hero-brReal',
       child: ClipRRect(
-                  borderRadius: BorderRadius.circular(20.0),
-                  child: Image(image: AssetImage('assets/images/bgReal.png')),
+        borderRadius: BorderRadius.circular(20.0),
+        child: Image(
+          image: AssetImage('assets/images/bgReal.png'),
+          color: Colors.cyan,
+          colorBlendMode: BlendMode.hue,
+        ),
       ),
     );
   }

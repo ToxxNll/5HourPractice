@@ -25,7 +25,8 @@ class _ProfilePageState extends State<SettingsPage> {
         centerTitle: true,
         automaticallyImplyLeading:
             false, //This code automatically makes the back button
-        leading: IconButton( //Same as automaticallyImplyLeading
+        leading: IconButton(
+          //Same as automaticallyImplyLeading
           icon: const Icon(Icons.arrow_back_ios_new),
           onPressed: () {
             Navigator.pop(context);
@@ -129,9 +130,15 @@ class _ProfilePageState extends State<SettingsPage> {
 
               ElevatedButton(
                 onPressed: () {
-                  print('Elevated button');
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text("This is a snackbar"),
+                      duration: Duration(seconds: 2),
+                      behavior: SnackBarBehavior.floating,
+                    ),
+                  );
                 },
-                child: const Text('Eleve'),
+                child: const Text("Show Snackbar"),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
