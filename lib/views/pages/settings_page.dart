@@ -146,9 +146,19 @@ class _ProfilePageState extends State<SettingsPage> {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  print('Elevated button with style');
+                  showDialog(context: context, builder: (context) {
+                    return AlertDialog(
+                      title: Text("Alert Title"),
+                      content: Text("Alert Content"),
+                      actions: [
+                        ElevatedButton(onPressed: () {
+                          Navigator.pop(context);
+                        }, child: Text("Close"))
+                      ],
+                    );
+                  });
                 },
-                child: Text("SEleve"),
+                child: Text("Alert Button"),
               ),
               FilledButton(
                 onPressed: () {
