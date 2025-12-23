@@ -11,9 +11,23 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          HeroWidget(),
           Container(
-            height: 400,
-            child: HeroWidget())
+            width: double.infinity,
+            padding: EdgeInsets.symmetric(vertical: 10.0),
+            child: Card(
+              child: Padding(
+                padding: EdgeInsets.all(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("Some Card"),
+                    Text("Some Card Details"),
+                  ],
+                ),
+              ),              
+            ),
+          ),
         ],
       ),
     );
