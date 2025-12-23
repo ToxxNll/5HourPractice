@@ -1,3 +1,4 @@
+import 'package:fivehour/views/data/constants.dart';
 import 'package:fivehour/views/widgets/hero_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -21,11 +22,14 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("Some Card"),
-                    Text("Some Card Details"),
+                    Text("Some Card", style: KTextStyle.titleTealtext),
+                    Text(
+                      "Some Card Details",
+                      style: KTextStyle.descriptionText,
+                    ),
                   ],
                 ),
-              ),              
+              ),
             ),
           ),
         ],

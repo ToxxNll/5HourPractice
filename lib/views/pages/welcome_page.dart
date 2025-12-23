@@ -10,40 +10,61 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 10,
-          children: [
-            Container(
-              height: 600.0,
-              child: HeroWidget()
-            ),
-            FilledButton(
-              style: ElevatedButton.styleFrom(
-                fixedSize: Size(200, 50),
-                backgroundColor: Colors.cyan,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 50,
-                  vertical: 15,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30.0),
+      body: Container(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          backgroundBlendMode: BlendMode.color,
+          image: DecorationImage(image: AssetImage('assets/images/bgReal.png')),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            spacing: 10,
+            children: [
+              FittedBox(
+                child: Text(
+                  "Flutter App",
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    letterSpacing: 5,
+                  ),
                 ),
               ),
-              onPressed: () {
-                Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return WidgetTree();
-                    },
-                  ),
-                );
-              },
-              child: Text("Login", style: TextStyle(fontSize: 20)),
-            ),
-          ],
+              FilledButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return WidgetTree();
+                      },
+                    ),
+                  );
+                },
+                style: FilledButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                ),
+                child: Text("Get Started", style: TextStyle(fontSize: 20)),
+              ),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return WidgetTree();
+                      },
+                    ),
+                  );
+                },
+                style: FilledButton.styleFrom(
+                  minimumSize: Size(double.infinity, 50),
+                ),
+                child: Text("Login", style: TextStyle(fontSize: 20)),
+              ),
+            ],
+          ),
         ),
       ),
     );
