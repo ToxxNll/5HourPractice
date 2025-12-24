@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          HeroWidget(),
+          HeroWidget(title: 'Card'),
           Container(
             width: double.infinity,
             padding: EdgeInsets.symmetric(vertical: 10.0),

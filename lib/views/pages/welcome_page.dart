@@ -1,4 +1,5 @@
 import 'package:fivehour/views/pages/home_page.dart';
+import 'package:fivehour/views/pages/login_page.dart';
 import 'package:fivehour/views/widgets/hero_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -6,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../widget_tree.dart';
 
 class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key}); 
+  const WelcomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class WelcomePage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return WidgetTree();
+                            return LoginPage();
                           },
                         ),
                       );
@@ -71,9 +72,7 @@ class WelcomePage extends StatelessWidget {
                     ),
                     child: Text("Login", style: TextStyle(fontSize: 20)),
                   ),
-                  Container(
-                    height: 20,
-                  )
+                  Container(height: 20),
                 ],
               ),
             ),

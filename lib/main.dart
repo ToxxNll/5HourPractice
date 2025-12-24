@@ -17,20 +17,22 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            // colorScheme: ColorScheme.fromSeed(
-            //   // seedColor: const Color.fromARGB(255, 34, 152, 248),
-              
-            //   seedColor: const Color(0xFF6C63FF),
-            //   brightness: isDarkMode ? Brightness.dark : Brightness.light
-            // ),
-            colorScheme: const ColorScheme.dark(
-              primary: Color(0xFF6C63FF),
+            colorScheme: ColorScheme.fromSeed(
+              // seedColor: const Color.fromARGB(255, 34, 152, 248),
+              seedColor: const Color(0xFF3A5A40),
               secondary: Color(0xFF3A5A40),
-              background: Color(0xFF121417),
-              surface: Color(0xFF1A1F24),
-              onPrimary: Colors.white,
-              onSurface: Color(0xFFEAECEF),
+              surface: isDarkMode ? Color(0xFF1A1F24) : Colors.white,
+              //surfaceBright: Colors.white12,
+              brightness: isDarkMode ? Brightness.dark : Brightness.light,
             ),
+            // colorScheme: const ColorScheme.dark(
+            //   primary: Color(0xFF3A5A40),
+            //   secondary: Color(0xFF3A5A40),
+            //   background: Color(0xFF121417),
+            //   surface: Color(0xFF1A1F24),
+            //   onPrimary: Colors.white,
+            //   onSurface: Color(0xFFEAECEF),
+            // ),
           ),
           home: WelcomePage(),
         );
