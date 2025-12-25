@@ -1,6 +1,4 @@
-import 'package:fivehour/views/pages/home_page.dart';
 import 'package:fivehour/views/pages/login_page.dart';
-import 'package:fivehour/views/widgets/hero_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -12,7 +10,7 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF121417),
+      //backgroundColor: Color(0xFF121417),
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 15),
         child: Stack(
@@ -42,11 +40,11 @@ class WelcomePage extends StatelessWidget {
                   ),
                   FilledButton(
                     onPressed: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return WidgetTree();
+                            return LoginPage(title: 'Register');
                           },
                         ),
                       );
@@ -58,11 +56,11 @@ class WelcomePage extends StatelessWidget {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.pushReplacement(
+                      Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
-                            return LoginPage();
+                            return LoginPage(title: 'Login');
                           },
                         ),
                       );

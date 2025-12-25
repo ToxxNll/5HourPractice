@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -146,17 +144,23 @@ class _ProfilePageState extends State<SettingsPage> {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  showDialog(context: context, builder: (context) {
-                    return AlertDialog(
-                      title: Text("Alert Title"),
-                      content: Text("Alert Content"),
-                      actions: [
-                        ElevatedButton(onPressed: () {
-                          Navigator.pop(context);
-                        }, child: Text("Close"))
-                      ],
-                    );
-                  });
+                  showDialog(
+                    context: context,
+                    builder: (context) {
+                      return AlertDialog(
+                        title: Text("Alert Title"),
+                        content: Text("Alert Content"),
+                        actions: [
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: Text("Close"),
+                          ),
+                        ],
+                      );
+                    },
+                  );
                 },
                 child: Text("Alert Button"),
               ),

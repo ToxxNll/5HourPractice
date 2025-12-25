@@ -1,8 +1,11 @@
 import 'package:fivehour/views/data/notifiers.dart';
 import 'package:fivehour/views/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(const MyApp());
 }
 

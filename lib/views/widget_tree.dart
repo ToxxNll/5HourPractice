@@ -31,25 +31,30 @@ class WidgetTree extends StatelessWidget {
               );
             },
           ),
-          IconButton(onPressed: () {
-            Navigator.push(
+          IconButton(
+            onPressed: () {
+              Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) {
                     return SettingsPage(title: 'Settings aoge');
-                  },));
-          }, icon: Icon(Icons.settings)),
+                  },
+                ),
+              );
+            },
+            icon: Icon(Icons.settings),
+          ),
         ],
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            DrawerHeader(child: Text('Drawer Header')),
-            ListTile(title: Text('Item 1')),
-            ListTile(title: Text('Item 2')),
-          ],
-        ),
-      ),
+      // drawer: Drawer(
+      //   child: Column(
+      //     children: [
+      //       DrawerHeader(child: Text('Drawer Header')),
+      //       ListTile(title: Text('Item 1')),
+      //       ListTile(title: Text('Item 2')),
+      //     ],
+      //   ),
+      // ),
       body: ValueListenableBuilder(
         valueListenable: selectedPageNotifier,
         builder: (context, selectedPage, child) {

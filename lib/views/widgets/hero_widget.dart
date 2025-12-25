@@ -16,20 +16,23 @@ class HeroWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(20.0),
             child: Image(
               image: AssetImage('assets/images/someMountains.jpg'),
-              color: Colors.cyan,
-              colorBlendMode: BlendMode.hue,
+              // color: Colors.cyan,
+              color: Color(0xFF3A5A40),
+              colorBlendMode: BlendMode.hardLight,
             ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(top: 30),
-          child: Text(
-            title,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 80,
-              letterSpacing: 5,
-              color: Colors.black87,
+          child: FittedBox(
+            child: Text(
+              title,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 80,
+                letterSpacing: 10,
+                color: Colors.black54,
+              ),
             ),
           ),
         ),
