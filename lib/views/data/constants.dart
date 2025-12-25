@@ -19,3 +19,6 @@ class AppColorScheme{
   static const Color secondary = Color(0xFF3A5A40);
 
 }
+class KConstants{
+  static const String themeModeKey = 'themeModeKey';
+}
